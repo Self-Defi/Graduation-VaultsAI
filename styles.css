@@ -1,4 +1,4 @@
-/* Base layout */
+/* ---------- Base reset ---------- */
 * {
   box-sizing: border-box;
 }
@@ -10,7 +10,7 @@ body {
   color: #1a1a1a;
 }
 
-/* Top brand bar */
+/* ---------- Top brand bar ---------- */
 .topbar {
   background: #0f304d;
   color: #ffffff;
@@ -23,6 +23,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  padding: 5px 0;
 }
 
 .brand-logo {
@@ -47,14 +48,14 @@ body {
   opacity: 0.85;
 }
 
-/* Page container */
+/* ---------- Page container ---------- */
 .page {
   max-width: 960px;
   margin: 0 auto;
   padding: 16px;
 }
 
-/* Hero section */
+/* ---------- Hero section ---------- */
 .hero {
   text-align: center;
   margin-bottom: 24px;
@@ -65,7 +66,8 @@ body {
   max-width: 900px;
   height: auto;
   border-radius: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .hero h1 {
@@ -77,10 +79,10 @@ body {
 .hero-subtitle {
   margin: 0;
   font-size: 0.95rem;
-  color: #444;
+  color: #444444;
 }
 
-/* Video section */
+/* ---------- Video section ---------- */
 .video-section {
   text-align: center;
   margin-bottom: 28px;
@@ -92,19 +94,18 @@ body {
 }
 
 .video-wrapper {
-  position: relative;
   max-width: 900px;
   margin: 0 auto;
 }
 
-/* Responsive 16:9 video */
 .video-wrapper video {
   width: 100%;
+  max-width: 900px;
   height: auto;
   border-radius: 8px;
 }
 
-/* Resources */
+/* ---------- Resources section ---------- */
 .resources {
   text-align: center;
   margin-bottom: 40px;
@@ -120,6 +121,7 @@ body {
   justify-content: center;
   gap: 12px;
   flex-wrap: wrap;
+  margin-bottom: 8px;
 }
 
 .button {
@@ -127,7 +129,7 @@ body {
   min-width: 190px;
   padding: 12px 20px;
   background: #0f304d;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 999px;
   font-weight: 600;
@@ -135,17 +137,31 @@ body {
   transition: background 0.2s, transform 0.1s;
 }
 
+.button.secondary {
+  background: #1f4f82;
+}
+
 .button:hover {
   background: #082033;
   transform: translateY(-1px);
 }
 
-/* Footer */
+/* ---------- Footer ---------- */
 footer {
   text-align: center;
   padding: 14px 10px 18px;
   font-size: 0.8rem;
   color: #666666;
+}
+
+footer a {
+  color: #0f304d;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 /* ---------- Responsive tweaks ---------- */
