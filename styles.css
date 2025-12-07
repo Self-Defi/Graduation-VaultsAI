@@ -1,47 +1,197 @@
-body {
-  margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background: #f9f7f2; /* cream */
-  color: #1a1a1a;
-  text-align: center;
+/* Base layout */
+* {
+  box-sizing: border-box;
 }
 
-.hero {
-  padding: 20px;
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f9f7f2; /* cream */
+  color: #1a1a1a;
+}
+
+/* Top brand bar */
+.topbar {
   background: #0f304d;
-  color: white;
+  color: #ffffff;
+  padding: 8px 16px;
+}
+
+.brand {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.brand-tagline {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+/* Page container */
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  margin-bottom: 24px;
 }
 
 .hero-image {
-  max-width: 600px;
-  width: 90%;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
-.video-section, .resources {
-  padding: 20px;
+.hero h1 {
+  margin: 8px 0 4px;
+  font-size: 1.8rem;
+  color: #0f304d;
+}
+
+.hero-subtitle {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Video section */
+.video-section {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.video-section h2 {
+  margin-bottom: 10px;
+  color: #0f304d;
+}
+
+.video-wrapper {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Responsive 16:9 video */
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Resources */
+.resources {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.resources h2 {
+  margin-bottom: 12px;
+  color: #0f304d;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .button {
   display: inline-block;
-  margin: 10px;
-  padding: 12px 24px;
+  min-width: 190px;
+  padding: 12px 20px;
   background: #0f304d;
   color: white;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 999px;
   font-weight: 600;
-  transition: 0.2s;
+  font-size: 0.9rem;
+  transition: background 0.2s, transform 0.1s;
 }
 
 .button:hover {
   background: #082033;
+  transform: translateY(-1px);
 }
 
+/* Footer */
 footer {
-  margin-top: 30px;
-  padding: 15px;
+  text-align: center;
+  padding: 14px 10px 18px;
   font-size: 0.8rem;
-  color: #666;
+  color: #666666;
+}
+
+/* ---------- Responsive tweaks ---------- */
+
+/* Tablets and down */
+@media (max-width: 900px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .page {
+    padding: 12px;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .brand {
+    justify-content: center;
+  }
+
+  .brand-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand-name {
+    font-size: 0.9rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.75rem;
+  }
+
+  .hero h1 {
+    font-size: 1.35rem;
+  }
+
+  .button-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 320px;
+    margin: 4px auto;
+  }
 }
