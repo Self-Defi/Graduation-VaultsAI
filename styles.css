@@ -78,7 +78,6 @@ body {
 .video-section {
   text-align: center;
   margin-bottom: 32px;
-  background-color: #faf6ef;
 }
 
 .video-section h2 {
@@ -86,28 +85,23 @@ body {
   color: #0f304d;
 }
 
-/* VIDEO WRAPPER with brand-matched gradient frame */
+/* Video wrapper with solid black frame */
 .video-wrapper {
   max-width: 900px;
   margin: 0 auto;
   padding: 0;
   border-radius: 8px;
-  background: linear-gradient(
-    90deg,
-    #0f304d 0%,
-    #143f66 45%,
-    #0f304d 100%
-  );
+  background: #000000; /* brings back the black borders */
+  overflow: hidden;    /* keeps corners clean with radius */
 }
 
-/* Video fills the wrapper; transparent so gradient shows at edges */
+/* Video element */
 .video-wrapper video {
   width: 100%;
-  max-width: 900px;
   height: auto;
-  border-radius: 8px;
-  background: transparent;
   display: block;
+  border-radius: 8px;
+  background: #000000; /* ensures any letterboxing stays black */
 }
 
 /* ---------- Resources section ---------- */
