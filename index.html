@@ -3,39 +3,38 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>GraduationVaultsAI Learning Hub</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="./assets/social-thumbnail.jpg" />
+  <link rel="icon" type="image/png" href="/Graduation-VaultsAI/assets/social-thumbnail.jpg">
 
-  <!-- Open Graph / Social Preview -->
-  <meta property="og:title" content="GraduationVaultsAI Learning Hub" />
-  <meta property="og:description" content="Watch the introduction, explore resources, and learn how Graduation Vaults.AI works." />
-  <meta property="og:image" content="./assets/social-thumbnail.jpg" />
-  <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:url" content="https://self-defi.github.io/Graduation-VaultsAI/" />
-  <meta property="og:type" content="website" />
+  <!-- Social Sharing Preview -->
+  <meta property="og:title" content="GraduationVaultsAI Learning Hub">
+  <meta property="og:description" content="Watch • Learn • Explore — Your introduction to GraduationVaultsAI.">
+  <meta property="og:image" content="/Graduation-VaultsAI/assets/social-thumbnail.jpg">
+  <meta property="og:type" content="website">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="GraduationVaultsAI Learning Hub" />
-  <meta name="twitter:description" content="Watch the introduction and explore GraduationVaultsAI resources." />
-  <meta name="twitter:image" content="./assets/social-thumbnail.jpg" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GraduationVaultsAI Learning Hub">
+  <meta name="twitter:description" content="Your intro hub for GraduationVaultsAI.">
+  <meta name="twitter:image" content="/Graduation-VaultsAI/assets/social-thumbnail.jpg">
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-  <!-- TOP BAR -->
+  <!-- Top Bar -->
   <header class="topbar">
-    <div class="brand">
-      <img src="./assets/logos/self-defi-logo.png" class="brand-logo" alt="Self-Defi Logo" />
-      <span class="brand-text">Digital Infrastructure Architect</span>
+    <div class="brand-left">
+      <img 
+        src="/Graduation-VaultsAI/assets/logos/self-defi-logo.png" 
+        alt="Self-Defi Logo" 
+        class="brand-logo"
+        width="42"
+        height="42"
+      />
+      <span class="brand-title">Digital Infrastructure Architect</span>
     </div>
   </header>
 
@@ -53,10 +52,12 @@
       <video
         controls
         preload="metadata"
-        poster="./assets/video-poster.png">
-        <source
-          src="https://blue-magnetic-sole-156.mypinata.cloud/ipfs/bafybeihnoguc6tnxgawr3d6xxtbnrowyfzrodaukr2bkqlqf74kugopxiy?filename=Graduation%20Vaults%20AI%20v1.mp4"
-          type="video/mp4" />
+        poster="/Graduation-VaultsAI/assets/video-poster.png"
+      >
+        <source 
+          src="https://blue-magnetic-sole-156.mypinata.cloud/ipfs/bafybeias79pgq8djmqdkoqyz5env9a35dalewrh4zoc4pebj3aj5yqslq" 
+          type="video/mp4"
+        />
       </video>
     </div>
   </section>
@@ -66,27 +67,43 @@
     <h2>Explore Resources</h2>
 
     <div class="button-row">
-      <a class="button" href="https://blue-magnetic-sole-156.mypinata.cloud/ipfs/bafybe1syx2zff4q0s3lm0zlu07gns3mpbwnbnns3yredgaup0k1n5dnp4m?filename=GVAI%20Mind%20Map.pdf" target="_blank">View Mind Map</a>
+      <a 
+        class="button" 
+        href="https://blue-magnetic-sole-156.mypinata.cloud/ipfs/bafybei5ro3u2f6y7k7qk2sgq6f4puruxyvctdetq63nby6pd2dh3224y7a"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View Mind Map
+      </a>
 
-      <a class="button" href="https://blue-magnetic-sole-156.mypinata.cloud/ipfs/bafybeico7m6ip4r4qti7j2cupj6vwsclzae5ddbavj6ouulr5fqjv4iyt4?filename=GraduationVaultsAI%20Presentation.pdf" target="_blank">View Presentation Slides</a>
+      <a 
+        class="button" 
+        href="https://blue-magnetic-sole-156.mypinata.cloud/ipfs/bafybeibs5vi776r45y7o7zlgipjx3qu22g27wmjgx4gknuupsn7a66scru"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View Presentation Slides
+      </a>
 
-      <a class="button" id="openQuizModal">Quiz Yourself</a>
+      <button id="quizBtn" class="button">Quiz Yourself</button>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <p>Powered by Self-Defi • <a href="https://self-defi.github.io/" target="_blank">Return to Main Site</a></p>
+  <footer class="footer">
+    <p>Powered by Self-Defi • 
+      <a href="https://self-defi.github.io" target="_blank">Return to Main Site</a>
+    </p>
   </footer>
 
   <!-- QUIZ MODAL -->
   <div id="quizModal" class="modal">
     <div class="modal-content">
-      <span class="modal-close" id="closeQuizModal">&times;</span>
+      <span id="closeModal" class="close">&times;</span>
 
       <h2>Quiz Yourself</h2>
       <p>
-        This short quiz tests what you learned in the GraduationVaultsAI introduction.
+        This short quiz tests what you learned in the GraduationVaultsAI introduction. 
         It is generated directly from the video and presentation sources.
       </p>
 
@@ -94,9 +111,12 @@
         The quiz opens in a new tab because Google NotebookLM does not allow embedding.
       </div>
 
-      <a class="button modal-button"
+      <a 
+        class="modal-button"
         href="https://notebooklm.google.com/notebook/63915487-c545-4f13-9c4e-b10e3232d521?artifactId=4204e381-17d5-4d42-a6df-a8f76323f705"
-        target="_blank">
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Start Quiz →
       </a>
     </div>
@@ -104,19 +124,22 @@
 
   <!-- MODAL SCRIPT -->
   <script>
-    const quizBtn = document.getElementById("openQuizModal");
+    const quizBtn = document.getElementById("quizBtn");
     const quizModal = document.getElementById("quizModal");
-    const closeQuizBtn = document.getElementById("closeQuizModal");
+    const closeModal = document.getElementById("closeModal");
 
-    quizBtn.onclick = () => quizModal.style.display = "flex";
-    closeQuizBtn.onclick = () => quizModal.style.display = "none";
+    quizBtn.onclick = () => quizModal.style.display = "block";
+    closeModal.onclick = () => quizModal.style.display = "none";
 
-    window.onclick = (e) => {
-      if (e.target === quizModal) quizModal.style.display = "none";
+    window.onclick = event => {
+      if (event.target === quizModal) {
+        quizModal.style.display = "none";
+      }
     };
   </script>
 
 </body>
 </html>
+
 
 
