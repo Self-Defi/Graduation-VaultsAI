@@ -62,15 +62,6 @@ body {
   background-color: #faf6ef;
 }
 
-.hero-image {
-  width: 100%;
-  max-width: 900px;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 18px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
-
 .hero h1 {
   margin: 8px 0 4px;
   font-size: 1.8rem;
