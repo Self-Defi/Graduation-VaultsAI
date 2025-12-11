@@ -55,11 +55,10 @@ body {
   padding: 16px;
 }
 
-/* ---------- Hero section ---------- */
+/* ---------- Hero (text only now) ---------- */
 .hero {
   text-align: center;
-  margin-bottom: 24px;
-  background-color: #faf6ef;
+  margin: 24px 0 28px;
 }
 
 .hero h1 {
@@ -69,7 +68,6 @@ body {
 }
 
 .hero-subtitle {
-  margin: 0;
   font-size: 0.95rem;
   color: #444444;
 }
@@ -77,8 +75,7 @@ body {
 /* ---------- Video section ---------- */
 .video-section {
   text-align: center;
-  margin-bottom: 28px;
-  background-color: #faf6ef;
+  margin-bottom: 32px;
 }
 
 .video-section h2 {
@@ -93,16 +90,14 @@ body {
 
 .video-wrapper video {
   width: 100%;
-  max-width: 900px;
-  height: auto;
   border-radius: 8px;
+  background: #000; /* ensures clean look before load */
 }
 
 /* ---------- Resources section ---------- */
 .resources {
   text-align: center;
   margin-bottom: 40px;
-  background-color: #faf6ef;
 }
 
 .resources h2 {
@@ -142,7 +137,6 @@ footer {
   padding: 14px 10px 18px;
   font-size: 0.8rem;
   color: #666666;
-  background-color: #faf6ef;
 }
 
 footer a {
@@ -156,35 +150,15 @@ footer a:hover {
 }
 
 /* ---------- Responsive tweaks ---------- */
-
-/* Tablets and down */
 @media (max-width: 900px) {
   .hero h1 {
     font-size: 1.6rem;
   }
-
-  .page {
-    padding: 12px;
-  }
 }
 
-/* Phones */
 @media (max-width: 600px) {
   .brand {
     justify-content: center;
-  }
-
-  .brand-logo {
-    width: 32px;
-    height: 32px;
-  }
-
-  .brand-name {
-    font-size: 0.9rem;
-  }
-
-  .brand-tagline {
-    font-size: 0.75rem;
   }
 
   .hero h1 {
@@ -193,12 +167,11 @@ footer a:hover {
 
   .button-row {
     flex-direction: column;
-    align-items: stretch;
   }
 
   .button {
     width: 100%;
     max-width: 320px;
-    margin: 4px auto;
   }
 }
+
