@@ -1,46 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Graduation Vaults.AI — Open Graph + Social Share Metadata -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Primary Meta -->
-  <title>Graduation Vaults.AI — Unlock Tomorrow. Today.</title>
-  <meta name="description" content="GraduationVaultsAI — a lightweight decentralized learning hub for video, mind map, and presentation resources.">
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://self-defi.github.io/Graduation-VaultsAI/" />
-
-  <!-- Open Graph / Facebook / Discord / iMessage -->
-  <meta property="og:site_name" content="Graduation Vaults.AI" />
-  <meta property="og:title" content="Graduation Vaults.AI — Empowering Students Today with the Technology of Tomorrow." />
-  <meta property="og:description" content="Unlock Tomorrow. Today." />
-  <meta property="og:url" content="https://self-defi.github.io/Graduation-VaultsAI/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://self-defi.github.io/Graduation-VaultsAI/assets/hero.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-
-  <!-- Twitter / X Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Graduation Vaults.AI — Unlock Tomorrow. Today." />
-  <meta name="twitter:description" content="Empowering students today with the technology of tomorrow." />
-  <meta name="twitter:image" content="https://self-defi.github.io/Graduation-VaultsAI/assets/hero.png" />
-
-  <!-- Mobile Theme -->
-  <meta name="theme-color" content="#0A2E57" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GraduationVaultsAI Hub</title>
   <link rel="stylesheet" href="styles.css" />
+  <meta
+    name="description"
+    content="GraduationVaultsAI — a lightweight decentralized hub for the introduction video, mind map, slides, and interactive quiz."
+  />
 </head>
 
 <body>
-
-  <!-- Top brand strip -->
+  <!-- Top brand strip with Self-Defi identity -->
   <header class="topbar">
     <div class="brand">
-      <img src="./assets/self-defi-logo.png" alt="Self-Defi Logo" class="brand-logo" />
+      <img
+        src="./assets/self-defi-logo.png"
+        alt="Self-Defi logo"
+        class="brand-logo"
+      />
       <div class="brand-text">
         <div class="brand-name">Self-Defi</div>
         <div class="brand-tagline">Digital Infrastructure Architect</div>
@@ -49,7 +28,6 @@
   </header>
 
   <main class="page">
-
     <!-- HERO SECTION (CLEAN — NO HERO IMAGE) -->
     <section class="hero">
       <h1>GraduationVaultsAI Learning Hub</h1>
@@ -57,52 +35,143 @@
     </section>
 
     <!-- VIDEO SECTION -->
-   <section class="video-section">
-  <h2>Introduction Video</h2>
-
-  <div class="video-wrapper">
-    <video
-      controls
-      preload="metadata"
-      poster="./assets/video-poster.png"
-    >
-      <source
-        src="https://blue-magnetic-sole-156.mypinata.cloud/ipfs/bafybeiasyzqpqg3djmdqkwyz5env3ga5dalewrh4zoc4pfebjaihhz32xy"
-        type="video/mp4"
-      />
-    </video>
-  </div>
-</section>
+    <section class="video-section">
+      <h2>Introduction Video</h2>
+      <div class="video-wrapper">
+        <video
+          controls
+          preload="metadata"
+          poster="./assets/video-poster.png"
+        >
+          <source
+            src="https://blue-magnetic-sole-156.mypinata.cloud/ipfs/bafybeiasyzqpqg3djmdqkwyz5env3ga5dalewrh4zoc4pfebjaihhz32xy"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+    </section>
 
     <!-- RESOURCES -->
     <section class="resources">
       <h2>Explore Resources</h2>
 
       <div class="button-row">
-
-        <a class="button"
+        <a
+          class="button"
           href="https://blue-magnetic-sole-156.mypinata.cloud/ipfs/bafybeie7x2ff4ojbmlo3u76gns3npbwvmbs3yrejgapu6okqln5bduyh7m"
-          target="_blank" rel="noopener">
+          target="_blank"
+          rel="noopener"
+        >
           View Mind Map
         </a>
 
-        <a class="button"
+        <a
+          class="button"
           href="https://blue-magnetic-sole-156.mypinata.cloud/ipfs/bafybeigfo3qeijpku7h64w4bzqes5vdihq4s3gfm26lrne2n5345rrvawe"
-          target="_blank" rel="noopener">
+          target="_blank"
+          rel="noopener"
+        >
           View Presentation Slides
         </a>
 
+        <!-- New: Quiz Yourself opens modal -->
+        <button
+          class="button button-quiz"
+          type="button"
+          id="quizButton"
+        >
+          Quiz Yourself
+        </button>
       </div>
     </section>
-
   </main>
 
-  <!-- FOOTER -->
   <footer>
     Powered by Self-Defi •
-    <a href="https://GraduationVaults.com" target="_blank" rel="noopener">Return to Main Site</a>
+    <a href="https://GraduationVaults.com" target="_blank" rel="noopener">
+      Return to Main Site
+    </a>
   </footer>
 
+  <!-- QUIZ MODAL -->
+  <div class="modal-overlay" id="quizModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="quizModalTitle">
+      <button
+        class="modal-close"
+        type="button"
+        id="quizModalClose"
+        aria-label="Close quiz"
+      >
+        ×
+      </button>
+
+      <h2 id="quizModalTitle">Quiz Yourself</h2>
+      <p class="modal-description">
+        Test what you learned from the GraduationVaultsAI intro materials.
+        This quiz is built directly from the same sources used in the video and slides.
+      </p>
+
+      <div class="modal-frame-wrap">
+        <iframe
+          src="https://notebooklm.google.com/notebook/63915487-c545-4f13-9c4e-b10e3232d521?artifactId=4204e381-17d5-4d42-a6df-a8f76323f705"
+          title="GraduationVaultsAI Quiz"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+      <p class="modal-footer-link">
+        Having trouble viewing the quiz?&nbsp;
+        <a
+          href="https://notebooklm.google.com/notebook/63915487-c545-4f13-9c4e-b10e3232d521?artifactId=4204e381-17d5-4d42-a6df-a8f76323f705"
+          target="_blank"
+          rel="noopener"
+        >
+          Open it in a new tab
+        </a>.
+      </p>
+    </div>
+  </div>
+
+  <!-- Minimal JS for opening/closing the modal -->
+  <script>
+    (function () {
+      const openBtn = document.getElementById("quizButton");
+      const modal = document.getElementById("quizModal");
+      const closeBtn = document.getElementById("quizModalClose");
+
+      if (!openBtn || !modal || !closeBtn) return;
+
+      function openModal() {
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("no-scroll");
+      }
+
+      function closeModal() {
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("no-scroll");
+      }
+
+      openBtn.addEventListener("click", openModal);
+      closeBtn.addEventListener("click", closeModal);
+
+      // Close when clicking outside the dialog
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+
+      // Close on Escape key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeModal();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
 
