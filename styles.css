@@ -75,6 +75,7 @@ body {
 }
 
 /* ---------- Video section ---------- */
+/* ---------- Video section ---------- */
 .video-section {
   text-align: center;
   margin-bottom: 32px;
@@ -85,29 +86,24 @@ body {
   color: #0f304d;
 }
 
-/* VIDEO WRAPPER: updated with brand-matched gradient */
+/* Clean wrapper, hides any mismatch between poster and aspect ratio */
 .video-wrapper {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0;
   border-radius: 8px;
-
-  /* BRAND-MATCHED GRADIENT */
-  background: linear-gradient(
-    180deg,
-    #0f304d 0%,
-    #143f66 45%,
-    #0f304d 100%
-  );
+  overflow: hidden;
+  background: #000; /* solid neutral background so no colored edges appear */
+  padding: 0;
 }
 
-/* Keep video edges clean while loading */
+/* Video fills wrapper horizontally; no gradient peeking through */
 .video-wrapper video {
+  display: block;
   width: 100%;
   max-width: 900px;
   height: auto;
-  border-radius: 8px;
-  background: transparent; /* ensure gradient shows */
+  border-radius: 0;
+  background: #000; /* safety fill to eliminate gaps */
 }
 
 /* ---------- Resources section ---------- */
