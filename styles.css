@@ -5,14 +5,20 @@
 
 body {
   margin: 0;
-  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
   background-color: #faf6ef; /* clean cream */
   color: #1a1a1a;
 }
 
+/* Prevent scrolling when modal open */
+body.no-scroll {
+  overflow: hidden;
+}
+
 /* ---------- Top brand bar ---------- */
 .topbar {
-  background: #0f304d; /* Self-Defi navy */
+  background: #0f304d;
   color: #ffffff;
   padding: 8px 16px;
 }
@@ -55,7 +61,7 @@ body {
   padding: 16px;
 }
 
-/* ---------- Hero section (NO IMAGE) ---------- */
+/* ---------- Hero section ---------- */
 .hero {
   text-align: center;
   margin-bottom: 24px;
@@ -75,7 +81,6 @@ body {
 }
 
 /* ---------- Video section ---------- */
-/* ---------- Video section ---------- */
 .video-section {
   text-align: center;
   margin-bottom: 32px;
@@ -92,24 +97,25 @@ body {
   margin: 0 auto;
   border-radius: 8px;
   overflow: hidden;
-  background: #000; /* solid neutral background so no colored edges appear */
+  background: #000; /* neutral cinematic background behind poster */
   padding: 0;
 }
 
-/* Video fills wrapper horizontally; no gradient peeking through */
+/* Video fills the wrapper width; no colored edges */
 .video-wrapper video {
   display: block;
   width: 100%;
   max-width: 900px;
   height: auto;
   border-radius: 0;
-  background: #000; /* safety fill to eliminate gaps */
+  background: #000;
 }
 
 /* ---------- Resources section ---------- */
 .resources {
   text-align: center;
   margin-bottom: 40px;
+  background-color: #faf6ef;
 }
 
 .resources h2 {
@@ -117,7 +123,6 @@ body {
   color: #0f304d;
 }
 
-/* Buttons */
 .button-row {
   display: flex;
   justify-content: center;
@@ -130,19 +135,31 @@ body {
   display: inline-block;
   min-width: 190px;
   padding: 12px 20px;
-  background: #0f304d; /* brand navy */
+  background: #0f304d;
   color: #ffffff;
   text-decoration: none;
   border-radius: 999px;
   font-weight: 600;
   font-size: 0.9rem;
   transition: background 0.2s, transform 0.1s;
+  border: none;
+  cursor: pointer;
+  text-align: center;
 }
 
 .button:hover {
-  background: #082033; /* deeper navy hover */
+  background: #082033;
   transform: translateY(-1px);
 }
+
+/* Optional: small emphasis for quiz button if you ever want it
+.button-quiz {
+  background: #123f6d;
+}
+.button-quiz:hover {
+  background: #0a2b4a;
+}
+*/
 
 /* ---------- Footer ---------- */
 footer {
@@ -163,6 +180,80 @@ footer a:hover {
   text-decoration: underline;
 }
 
+/* ---------- Modal (Quiz Yourself) ---------- */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-out;
+  z-index: 1000;
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  max-width: 960px;
+  width: 100%;
+  max-height: 90vh;
+  background: #faf6ef;
+  border-radius: 12px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
+  padding: 16px 20px 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-close {
+  align-self: flex-end;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #444444;
+}
+
+.modal h2 {
+  margin: 4px 0 6px;
+  color: #0f304d;
+  text-align: left;
+}
+
+.modal-description {
+  font-size: 0.9rem;
+  color: #444444;
+  margin-bottom: 10px;
+}
+
+.modal-frame-wrap {
+  flex: 1 1 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+}
+
+.modal-frame-wrap iframe {
+  width: 100%;
+  height: 60vh;
+  border: 0;
+  display: block;
+}
+
+.modal-footer-link {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #555555;
+}
+
 /* ---------- Responsive tweaks ---------- */
 
 /* Tablets and down */
@@ -173,6 +264,14 @@ footer a:hover {
 
   .page {
     padding: 12px;
+  }
+
+  .modal {
+    max-height: 92vh;
+  }
+
+  .modal-frame-wrap iframe {
+    height: 55vh;
   }
 }
 
@@ -208,6 +307,10 @@ footer a:hover {
     width: 100%;
     max-width: 320px;
     margin: 4px auto;
+  }
+
+  .modal {
+    padding: 12px;
   }
 }
 
