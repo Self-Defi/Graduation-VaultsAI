@@ -83,15 +83,12 @@ body {
   color: #0f304d;
 }
 
-.video-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
 .video-wrapper video {
   width: 100%;
+  max-width: 900px;
+  height: auto;
   border-radius: 8px;
-  background: #000; /* ensures clean look before load */
+  background: #000; /* keeps edges clean while loading */
 }
 
 /* ---------- Resources section ---------- */
