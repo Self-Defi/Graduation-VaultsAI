@@ -12,7 +12,7 @@ body {
 
 /* ---------- Top brand bar ---------- */
 .topbar {
-  background: #0f304d;
+  background: #0f304d; /* Self-Defi navy */
   color: #ffffff;
   padding: 8px 16px;
 }
@@ -55,10 +55,11 @@ body {
   padding: 16px;
 }
 
-/* ---------- Hero (text only now) ---------- */
+/* ---------- Hero section (NO IMAGE) ---------- */
 .hero {
   text-align: center;
-  margin: 24px 0 28px;
+  margin-bottom: 24px;
+  background-color: #faf6ef;
 }
 
 .hero h1 {
@@ -68,6 +69,7 @@ body {
 }
 
 .hero-subtitle {
+  margin: 0;
   font-size: 0.95rem;
   color: #444444;
 }
@@ -83,12 +85,29 @@ body {
   color: #0f304d;
 }
 
+/* VIDEO WRAPPER: updated with brand-matched gradient */
+.video-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 8px;
+
+  /* BRAND-MATCHED GRADIENT */
+  background: linear-gradient(
+    180deg,
+    #0f304d 0%,
+    #143f66 45%,
+    #0f304d 100%
+  );
+}
+
+/* Keep video edges clean while loading */
 .video-wrapper video {
   width: 100%;
   max-width: 900px;
   height: auto;
   border-radius: 8px;
-  background: #000; /* keeps edges clean while loading */
+  background: transparent; /* ensure gradient shows */
 }
 
 /* ---------- Resources section ---------- */
@@ -102,6 +121,7 @@ body {
   color: #0f304d;
 }
 
+/* Buttons */
 .button-row {
   display: flex;
   justify-content: center;
@@ -114,7 +134,7 @@ body {
   display: inline-block;
   min-width: 190px;
   padding: 12px 20px;
-  background: #0f304d;
+  background: #0f304d; /* brand navy */
   color: #ffffff;
   text-decoration: none;
   border-radius: 999px;
@@ -124,7 +144,7 @@ body {
 }
 
 .button:hover {
-  background: #082033;
+  background: #082033; /* deeper navy hover */
   transform: translateY(-1px);
 }
 
@@ -134,6 +154,7 @@ footer {
   padding: 14px 10px 18px;
   font-size: 0.8rem;
   color: #666666;
+  background-color: #faf6ef;
 }
 
 footer a {
@@ -147,15 +168,35 @@ footer a:hover {
 }
 
 /* ---------- Responsive tweaks ---------- */
+
+/* Tablets and down */
 @media (max-width: 900px) {
   .hero h1 {
     font-size: 1.6rem;
   }
+
+  .page {
+    padding: 12px;
+  }
 }
 
+/* Phones */
 @media (max-width: 600px) {
   .brand {
     justify-content: center;
+  }
+
+  .brand-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand-name {
+    font-size: 0.9rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.75rem;
   }
 
   .hero h1 {
@@ -164,11 +205,13 @@ footer a:hover {
 
   .button-row {
     flex-direction: column;
+    align-items: stretch;
   }
 
   .button {
     width: 100%;
     max-width: 320px;
+    margin: 4px auto;
   }
 }
 
