@@ -8,25 +8,22 @@
 
   <meta
     name="description"
-    content="GraduationVaultsAI — a lightweight Self-Defi learning hub with intro video, mind map, slides, and an AI-powered quiz from the same sources."
+    content="GraduationVaultsAI — a lightweight Self-Defi learning hub with intro video, mind map, and slides."
   />
 
-  <!-- Favicon / tab icon -->
+  <!-- Favicon -->
   <link
     rel="icon"
     type="image/png"
     href="/Graduation-VaultsAI/assets/self-defi-logo.png"
   />
 
-  <!-- Open Graph / social preview -->
+  <!-- Open Graph / Social Preview -->
   <meta property="og:type" content="website" />
-  <meta
-    property="og:title"
-    content="GraduationVaultsAI Learning Hub"
-  />
+  <meta property="og:title" content="GraduationVaultsAI Learning Hub" />
   <meta
     property="og:description"
-    content="Watch the intro video, explore the mind map and slides, and quiz yourself using the same AI sources powering GraduationVaultsAI."
+    content="Watch the introduction video and explore the supporting visuals and materials."
   />
   <meta
     property="og:image"
@@ -37,15 +34,12 @@
     content="https://self-defi.github.io/Graduation-VaultsAI/"
   />
 
-  <!-- Twitter cards -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta
-    name="twitter:title"
-    content="GraduationVaultsAI Learning Hub"
-  />
+  <meta name="twitter:title" content="GraduationVaultsAI Learning Hub" />
   <meta
     name="twitter:description"
-    content="Intro video, mind map, slides, and a quiz sourced from the same AI knowledge base."
+    content="Intro video, mind map, and slides for the GraduationVaultsAI program."
   />
   <meta
     name="twitter:image"
@@ -57,7 +51,7 @@
 </head>
 
 <body>
-  <!-- Top brand strip with Self-Defi identity -->
+  <!-- Top Brand Bar -->
   <header class="topbar">
     <div class="brand">
       <img
@@ -73,13 +67,13 @@
   </header>
 
   <main class="page">
-    <!-- HERO SECTION (TEXT ONLY) -->
+    <!-- HERO -->
     <section class="hero">
       <h1>GraduationVaultsAI Learning Hub</h1>
       <p class="hero-subtitle">Watch • Learn • Explore</p>
     </section>
 
-    <!-- VIDEO SECTION -->
+    <!-- VIDEO -->
     <section class="video-section">
       <h2>Introduction Video</h2>
 
@@ -98,7 +92,7 @@
       </div>
     </section>
 
-    <!-- RESOURCES SECTION -->
+    <!-- RESOURCES -->
     <section class="resources">
       <h2>Explore Resources</h2>
 
@@ -120,64 +114,9 @@
         >
           View Presentation Slides
         </a>
-
-        <button
-          class="button button-quiz"
-          type="button"
-          id="quiz-open"
-        >
-          Quiz Yourself
-        </button>
       </div>
     </section>
   </main>
-
-  <!-- QUIZ MODAL -->
-  <div
-    class="modal-backdrop"
-    id="quiz-modal"
-    aria-hidden="true"
-  >
-    <div
-      class="modal"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="quiz-modal-title"
-    >
-      <button
-        class="modal-close"
-        type="button"
-        id="quiz-close"
-        aria-label="Close quiz dialog"
-      >
-        ×
-      </button>
-
-      <h2 id="quiz-modal-title">Quiz Yourself</h2>
-      <p>
-        This short quiz tests what you learned in the GraduationVaultsAI
-        introduction. It is generated directly from the same sources used in
-        the video and presentation materials.
-      </p>
-
-      <div class="modal-body-note">
-        <p>
-          The quiz opens in a new tab because Google NotebookLM does not allow
-          embedding.
-        </p>
-      </div>
-
-      <a
-        class="button button-primary"
-        href="https://notebooklm.google.com/notebook/63915487-c545-4f13-9c4e-b10e3232d521?artifactId=4204e381-17d5-4d42-a6df-a8f76323f705"
-        target="_blank"
-        rel="noopener"
-        id="quiz-start"
-      >
-        Start Quiz →
-      </a>
-    </div>
-  </div>
 
   <!-- FOOTER -->
   <footer>
@@ -190,42 +129,6 @@
       Return to Main Site
     </a>
   </footer>
-
-  <!-- QUIZ MODAL SCRIPT -->
-  <script>
-    (function () {
-      const modal = document.getElementById("quiz-modal");
-      const openBtn = document.getElementById("quiz-open");
-      const closeBtn = document.getElementById("quiz-close");
-
-      if (!modal || !openBtn || !closeBtn) return;
-
-      function openModal() {
-        modal.classList.add("is-visible");
-        modal.setAttribute("aria-hidden", "false");
-      }
-
-      function closeModal() {
-        modal.classList.remove("is-visible");
-        modal.setAttribute("aria-hidden", "true");
-      }
-
-      openBtn.addEventListener("click", openModal);
-      closeBtn.addEventListener("click", closeModal);
-
-      modal.addEventListener("click", function (e) {
-        if (e.target === modal) {
-          closeModal();
-        }
-      });
-
-      window.addEventListener("keydown", function (e) {
-        if (e.key === "Escape" && modal.classList.contains("is-visible")) {
-          closeModal();
-        }
-      });
-    })();
-  </script>
 </body>
 </html>
 
