@@ -93,45 +93,41 @@
     </a>
   </footer>
 
-  <!-- QUIZ MODAL -->
-  <div class="modal-overlay" id="quizModal" aria-hidden="true">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="quizModalTitle">
-      <button
-        class="modal-close"
-        type="button"
-        id="quizModalClose"
-        aria-label="Close quiz"
+  <!-- QUIZ MODAL (Launch screen instead of iframe) -->
+<div class="modal-overlay" id="quizModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="quizModalTitle">
+    <button
+      class="modal-close"
+      type="button"
+      id="quizModalClose"
+      aria-label="Close quiz"
+    >
+      ×
+    </button>
+
+    <h2 id="quizModalTitle">Quiz Yourself</h2>
+
+    <p class="modal-description">
+      This short quiz tests what you learned in the GraduationVaultsAI introduction.
+      It is generated directly from the video and presentation sources.
+    </p>
+
+    <div class="quiz-launch-box">
+      <p class="quiz-note">
+        The quiz opens in a new tab because Google NotebookLM does not allow embedding.
+      </p>
+
+      <a
+        class="quiz-launch-button"
+        href="https://notebooklm.google.com/notebook/63915487-c545-4f13-9c4e-b10e3232d521?artifactId=4204e381-17d5-4d42-a6df-a8f76323f705"
+        target="_blank"
+        rel="noopener"
       >
-        ×
-      </button>
-
-      <h2 id="quizModalTitle">Quiz Yourself</h2>
-      <p class="modal-description">
-        Test what you learned from the GraduationVaultsAI intro materials.
-        This quiz is built directly from the same sources used in the video and slides.
-      </p>
-
-      <div class="modal-frame-wrap">
-        <iframe
-          src="https://notebooklm.google.com/notebook/63915487-c545-4f13-9c4e-b10e3232d521?artifactId=4204e381-17d5-4d42-a6df-a8f76323f705"
-          title="GraduationVaultsAI Quiz"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-
-      <p class="modal-footer-link">
-        Having trouble viewing the quiz?&nbsp;
-        <a
-          href="https://notebooklm.google.com/notebook/63915487-c545-4f13-9c4e-b10e3232d521?artifactId=4204e381-17d5-4d42-a6df-a8f76323f705"
-          target="_blank"
-          rel="noopener"
-        >
-          Open it in a new tab
-        </a>.
-      </p>
+        Start Quiz →
+      </a>
     </div>
   </div>
+</div>
 
   <!-- Minimal JS for opening/closing the modal -->
   <script>
