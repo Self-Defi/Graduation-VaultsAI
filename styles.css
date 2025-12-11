@@ -86,24 +86,35 @@ body {
 }
 
 /* Video wrapper with solid black frame */
+/* ---------- Video section ---------- */
+.video-section {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.video-section h2 {
+  margin-bottom: 10px;
+  color: #0f304d;
+}
+
+/* VIDEO WRAPPER: clean black frame */
 .video-wrapper {
   max-width: 900px;
   margin: 0 auto;
   padding: 0;
   border-radius: 8px;
-  background: #000000; /* brings back the black borders */
-  overflow: hidden;    /* keeps corners clean with radius */
+  background: #000000;  /* <-- true black */
+  overflow: hidden;     /* ensures clean edges */
 }
 
-/* Video element */
+/* VIDEO element */
 .video-wrapper video {
   width: 100%;
   height: auto;
-  display: block;
+  display: block;       /* removes Safari gap */
   border-radius: 8px;
-  background: #000000; /* ensures any letterboxing stays black */
+  background: #000000;  /* ensures no gradient shows */
 }
-
 /* ---------- Resources section ---------- */
 .resources {
   text-align: center;
